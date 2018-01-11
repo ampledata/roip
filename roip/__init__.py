@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Python RoIP Module.
+# Python Radio Over IP Module.
 
 """
-Python RoIP Module.
+Python Radio Over IP Module.
 ~~~~
 
 

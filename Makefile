@@ -57,7 +57,10 @@ pylint: lint
 coverage:
 	coverage report -m
 
-test: lint pep8 nosetests coverage
+test: lint pep8 nosetests mypy coverage
+
+mypy:
+	mypy .
 
 docker_install_requirements:
 	docker_install_requirements.sh

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Setup for the Python RoIP Module.
+Setup for the Python Radio Over IP Module.
 
 :author: Greg Albrecht W2GMD <oss@undef.net>
 :copyright: Copyright 2018 Orion Labs, Inc.
@@ -13,10 +13,10 @@ Setup for the Python RoIP Module.
 import os
 import sys
 
-import setuptools
+import setuptools  # type: ignore
 
 __title__ = 'roip'
-__version__ = '0.0.1b1'
+__version__ = '0.0.1b2'
 __author__ = 'Greg Albrecht W2GMD <oss@undef.net>'  # NOQA pylint: disable=R0801
 __copyright__ = 'Copyright 2018 Orion Labs, Inc.'  # NOQA pylint: disable=R0801
 __license__ = 'Apache License, Version 2.0'  # NOQA pylint: disable=R0801
@@ -36,7 +36,7 @@ publish()
 setuptools.setup(
     name=__title__,
     version=__version__,
-    description='Python RoIP Module.',
+    description='Python Radio Over IP Module.',
     author='Greg Albrecht',
     author_email='oss@undef.net',
     packages=['roip'],

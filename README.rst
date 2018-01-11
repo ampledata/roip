@@ -1,5 +1,16 @@
-roip - Python RoIP Module
-*************************
+roip - Python Radio Over IP (RoIP) Module
+*****************************************
+
+For use with Radio Over IP (RoIP) interfaces for sending and receiving
+transmissions from a Land Mobile Radio (LMR).
+
+Compatible with **most** C-Media CM108 and CM119 chipset-based boards, such as:
+
+* Master Communications RA-40 [tested!] - http://www.masterscommunications.com/products/radio-adapter/ra40.html
+* USHAM ARiUSB [tested!] - http://usham.net/
+* DMK Engineering URIx - http://dmkeng.com/URI_Order_Page.htm
+* Repeater Builder RB-USB RIM - http://www.repeater-builder.com/products/usb-rim.html
+* Repeater Builder RB-USB Lite - http://www.repeater-builder.com/products/usb-rim-lite.html
 
 
 Build Status
