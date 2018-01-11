@@ -16,7 +16,7 @@ import sys
 import setuptools  # type: ignore
 
 __title__ = 'roip'
-__version__ = '0.0.1b2'
+__version__ = '0.0.1b3'
 __author__ = 'Greg Albrecht W2GMD <oss@undef.net>'  # NOQA pylint: disable=R0801
 __copyright__ = 'Copyright 2018 Orion Labs, Inc.'  # NOQA pylint: disable=R0801
 __license__ = 'Apache License, Version 2.0'  # NOQA pylint: disable=R0801
@@ -51,7 +51,7 @@ setuptools.setup(
         'coverage >= 4.4.1',
         'nose >= 1.3.7'
     ],
-    install_requires=['hidapi'],
+    install_requires=['pyhidapi'],
     classifiers=[
         'Topic :: Communications :: Ham Radio',
         'Programming Language :: Python',
