@@ -28,6 +28,7 @@ class RoIP(object):
 
     def open(self) -> None:
         """Opens the connection to the RoIP device."""
+        hidapi.hid_init()
         self.hid_device = hidapi.hid_open(self.device[0], self.device[1])
 
     def close(self) -> None:
