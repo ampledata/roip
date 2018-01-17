@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Python RoIP Module Constants."""
+"""Python Radio Over IP Module Constants."""
 
 import logging
 import os

@@ -1,6 +1,13 @@
+# Dockerfile for Python Radio Over IP Module.
+#
+# Source:: https://github.com/ampledata/roip
+# Author:: Greg Albrecht W2GMD <oss@undef.net>
+# Copyright:: Copyright 2018 Orion Labs, Inc.
+# License:: Apache License, Version 2.0
+#
+
+
 FROM python:3-stretch
-ARG github_token
-ENV github_token=$github_token
 
 RUN apt-get update
 RUN apt-get install -y \

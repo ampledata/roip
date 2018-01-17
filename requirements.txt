@@ -1,4 +1,4 @@
-# Python Distribution Package Requirements for RoIP.
+# Python Distribution Package Requirements for Radio Over IP Module.
 #
 # Source:: https://github.com/ampledata/roip
 # Author:: Greg Albrecht W2GMD <oss@undef.net>

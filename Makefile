@@ -1,4 +1,4 @@
-# Makefile for Python RoIP Module.
+# Makefile for Python Radio Over IP Module.
 #
 # Source:: https://github.com/ampledata/roip
 # Author:: Greg Albrecht W2GMD <oss@undef.net>
@@ -38,7 +38,9 @@ clean:
 		test-result.xml htmlcov fab.log .coverage
 
 publish:
-	python setup.py register sdist upload
+	python setup.py sdist
+	twine upload dist/*
+
 
 nosetests: remember
 	python setup.py nosetests

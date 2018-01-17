@@ -10,9 +10,6 @@ Setup for the Python Radio Over IP Module.
 :source: <https://github.com/ampledata/roip>
 """
 
-import os
-import sys
-
 import setuptools  # type: ignore
 
 __title__ = 'roip'
@@ -22,17 +19,6 @@ __copyright__ = 'Copyright 2018 Orion Labs, Inc.'  # NOQA pylint: disable=R0801
 __license__ = 'Apache License, Version 2.0'  # NOQA pylint: disable=R0801
 
 
-def publish():
-    """Function for publishing package to pypi."""
-    if sys.argv[-1] == 'publish':
-        os.system('python setup.py sdist')
-        os.system('twine upload dist/*')
-        sys.exit()
-
-
-publish()
-
-
 setuptools.setup(
     name=__title__,
     version=__version__,
@@ -40,7 +26,7 @@ setuptools.setup(
     author='Greg Albrecht',
     author_email='oss@undef.net',
     packages=['roip'],
-    package_data={'': ['LICENSE']},
+    package_data={'': ['LICENSE', 'Dockerfile']},
     package_dir={'roip': 'roip'},
     license=open('LICENSE').read(),
     long_description=open('README.rst').read(),

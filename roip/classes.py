@@ -28,11 +28,11 @@ class RoIP(object):
 
     def open(self) -> None:
         """Opens the connection to the RoIP device."""
-        self.hid_device = hidapi.hid_open(self.device)
+        self.hid_device = hidapi.hid_open(self.device[0], self.device[1])
 
     def close(self) -> None:
         """Closes the connection to the RoIP device."""
-        self.hid_device = hidapi.hid_close(self.device)
+        self.hid_device = hidapi.hid_close(self.device[0], self.device[1])
 
     def ptt(self, callback=None) -> None:
         """
@@ -65,7 +65,7 @@ class RoIP(object):
         """
         hid_read = hidapi.hid_read(self.hid_device, roip.READ_SIZE)
 
-        cor_status = False
+        cor_status: bool = False
         if roip.COR_START in hid_read:
             cor_status = True
         elif roip.COR_STOP in hid_read:
@@ -83,7 +83,7 @@ class RoIP(object):
         """
         hid_read = hidapi.hid_read(self.hid_device, roip.READ_SIZE)
 
-        cor_status = False
+        cor_status: bool = False
         if roip.COR_START in hid_read:
             cor_status = True
         elif roip.COR_STOP in hid_read:
