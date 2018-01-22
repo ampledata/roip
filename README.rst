@@ -10,10 +10,20 @@ Compatible with **most** C-Media CM108 and CM119 chipset-based boards, such as:
 * USHAM ARiUSB [tested!] - http://usham.net/
 * DMK Engineering URIx - http://dmkeng.com/URI_Order_Page.htm
 * Repeater Builder RB-USB RIM - http://www.repeater-builder.com/products/usb-rim.html
-* Repeater Builder RB-USB Lite - http://www.repeater-builder.com/products/usb-rim-lite.html
+* Repeater Builder RB-USB Lite [tested!] - http://www.repeater-builder.com/products/usb-rim-lite.html
 
-Usage
-=====
+Requirements
+============
+
+The following Python and C libraries are required to utilize this library:
+
+* PyHIDAPI by Mark J. Blair @NF6X https://github.com/NF6X/pyhidapi
+* HIDAPI by Alan Ott @signal11 https://github.com/signal11/hidapi
+
+Example Usage
+=============
+
+The following example shows both PTT and COR using the a CM1xx:
 
 .. code-block:: python
 
