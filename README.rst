@@ -15,8 +15,8 @@ Compatible with **most** C-Media CM108 and CM119 chipset-based boards, such as:
 Usage
 =====
 
-.. highlight:: python
-    :linenothreshold: 5
+.. code-block:: python
+   :linenothreshold: 5
 
     import os
 
