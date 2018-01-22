@@ -16,7 +16,6 @@ Usage
 =====
 
 .. code-block:: python
-   :linenothreshold: 5
 
     import os
 
