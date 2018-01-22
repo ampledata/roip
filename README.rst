@@ -15,26 +15,40 @@ Compatible with **most** C-Media CM108 and CM119 chipset-based boards, such as:
 Usage
 =====
 
->>> import os
->>> import roip
->>> usb_dev: tuple = (0x0d8c, 0x013a)
->>> roip_dev = roip.RoIP(usb_dev)
->>> roip_dev.open()
->>> roip_dev.ptt(callback=lambda: os.system('aplay cw_id.wav'))
->>> started: bool = False
->>> while 1:
-...     if roip_dev.cor():
-...         if started:
-...             print('Incoming signal, continuing recording.')
-...         elif not started:
-...             print('Incoming signal, beginning recording.')
-...             os.system('rec signal.wav trim 0 10')
-...             started = True
-...     elif not roip_dev.cor():
-...         if started:
-...             print('Incoming signal stopped, stopping recording.')
-...             started = False
->>>
+.. highlight:: python
+    :linenothreshold: 5
+
+    import os
+
+    import roip
+
+    # 0x0D8C:0X013A is our C-Media CM1xx Soundcard
+    usb_dev: tuple = (0x0D8C, 0x013A)
+
+    roip_dev: roip.RoIP = roip.RoIP(usb_dev)
+    roip_dev.open()
+
+    # Trigger a PTT and play an audio file (via SoX's `aplay`):
+    roip_dev.ptt(callback=lambda: os.system('aplay cw_id.wav'))
+
+    # Start a loop and record 10 seconds every time there's an incoming signal:
+    started = False
+    while 1:
+        cor = roip_dev.cor()
+        if cor:
+            if started:
+                print('Incoming signal, continuing recording...')
+            elif not started:
+                print('Incoming signal, beginning recording.')
+                started = True
+                os.system('rec signal.wav trim 0 10')
+        elif not cor:
+            if started:
+            print('Incoming signal stopped, stopping recording.')
+            started = False
+
+    roip_dev.close()
+
 
 Build Status
 ============
