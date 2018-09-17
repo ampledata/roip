@@ -7,7 +7,7 @@ import logging
 
 from typing import List, Set, Dict, Tuple, Text, Optional, AnyStr
 
-import hidapi  # type: ignore
+import pyhidapi as hidapi  # type: ignore
 
 import roip  # pylint: disable=R0801
 
